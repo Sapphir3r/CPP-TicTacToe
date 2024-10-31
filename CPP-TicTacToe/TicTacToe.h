@@ -2,18 +2,23 @@
 #include<iostream>
 class TicTacToe : public Game
 {
-	bool ISGameOver = false;//fix
+public:
+	TicTacToe();
+	 bool ISGameOver() const ;
 
 
 
-	void TakeTurn()const {
+	 virtual void TakeTurn();
 
-		std::cout << "idk";
-	}
-	void Display()const {
-		std::cout << "idk what im putting here";
-	}
+	
+	 virtual void Display()const;
 
+private:
+	char m_board[9];
+	char currentPlayer;
+	void showBoard();
+	bool checkWin()const;
+	bool fullboard()const;
 
 
 };
