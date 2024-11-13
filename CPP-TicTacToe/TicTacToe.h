@@ -1,14 +1,14 @@
 #include "Game.h"
 #include<iostream>
-class TicTacToe :  Game
+class TicTacToe : public Game
 {
 public:
 	TicTacToe();
-	 bool ISGameOver() ;
+	 bool IsGameOver() const override  ;
 
 
 
-	 virtual void TakeTurn();
+	  void TakeTurn();
 
 	
 	  void Display() const ;
@@ -16,7 +16,6 @@ public:
 private:
 	char m_board[9];
 	char currentPlayer;
-	void StartBoard();
 	bool checkWin();
 	int count;
 	

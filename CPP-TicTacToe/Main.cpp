@@ -15,6 +15,7 @@ int main()
 		if (!pGame) return 0;
 
 		// play game
+
 		pGame->Display();
 
 		while (!pGame->IsGameOver())
