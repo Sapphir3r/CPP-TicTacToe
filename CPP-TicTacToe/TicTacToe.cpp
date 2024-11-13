@@ -50,7 +50,14 @@ bool  TicTacToe::checkWin()
 {
 	
 	char i = currentPlayer;
-	if (m_board[0] == i && m_board[1] == i && m_board[2] == i)
+	if (m_board[0] == i && m_board[1] == i && m_board[2] == i|| 
+		m_board[0] == i && m_board[3] == i && m_board[6] == i|| 
+		m_board[0] == i && m_board[4] == i && m_board[8] == i||
+		m_board[1] == i && m_board[4] == i && m_board[7] == i||
+		m_board[2] == i && m_board[5] == i && m_board[8] == i||
+		m_board[2] == i && m_board[4] == i && m_board[6] == i||
+		m_board[3] == i && m_board[4] == i && m_board[5] == i||
+		m_board[6] == i && m_board[7] == i && m_board[8] == i)
 	{
 		std::cout << currentPlayer << " is the winner";
 		ISGameOver();
