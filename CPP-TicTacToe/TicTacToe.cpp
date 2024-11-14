@@ -37,10 +37,10 @@ void  TicTacToe::TakeTurn()
 		std::cout << "Not a valid move.\n";
 	}
 }
-bool  TicTacToe::IsGameOver()const
+bool  TicTacToe::IsGameOver() const
 {
-	std::cout << "";
 	return false;
+	
 }
 
 bool  TicTacToe::checkWin() 
@@ -57,13 +57,13 @@ bool  TicTacToe::checkWin()
 		m_board[6] == i && m_board[7] == i && m_board[8] == i )
 	{
 		std::cout << currentPlayer << " is the winner";
-		IsGameOver();
 		
+		return true;
 	}
 	if (count == 9)
 	{
 		std::cout << " there is no winner";
-			IsGameOver();
+			return true;
 	}
 	currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
 	Display();
