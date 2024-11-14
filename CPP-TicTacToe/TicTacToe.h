@@ -4,19 +4,19 @@ class TicTacToe : public Game
 {
 public:
 	TicTacToe();
-	 bool IsGameOver() const override  ;
+	 bool IsGameOver() const;
 
 
 
 	  void TakeTurn();
 
 	
-	  void Display() const ;
+	  void Display() const;
 
 private:
 	char m_board[9];
 	char currentPlayer;
-	bool checkWin();
+	bool checkWin() const;
 	int count;
 	
 
