@@ -2,23 +2,15 @@
 #include<iostream>
 class TicTacToe : public Game
 {
-public:
-	TicTacToe();
-	 bool IsGameOver() const;
+	public:
+		TicTacToe();
+		bool IsGameOver() const;
+		 void TakeTurn();
+		void Display() const;
 
-
-
-	  void TakeTurn();
-
-	
-	  void Display() const;
-
-private:
-	char m_board[9];
-	char currentPlayer;
-	bool checkWin() const;
-	int count;
-	
-
-
+	private:
+		char m_board[9];
+		char currentPlayer;
+		bool checkWin() const;
+		int count;
 };
