@@ -22,7 +22,7 @@ void  TicTacToe::TakeTurn()
 {
 	
 	int decision;
-	std::cout << "Player " << currentPlayer << " , take your turn:";
+	std::cout << "Player " << currentPlayer << " , take your turn(1-9):";
 	std::cin >> decision;
 	decision = decision - 1;
 	if (m_board[decision] !='X' && m_board[decision] !='O')
